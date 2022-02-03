@@ -190,7 +190,7 @@ export default function HeaderConfig({
           // This defaults to `true`, so we can't pass `undefined`
           headerTransparent === true ||
           // When using a SearchBar or large title, the header needs to be translucent for it to work on iOS
-          ((hasHeaderSearchBar || headerLargeTitle) &&
+          ((hasHeaderSearchBar || headerLargeTitle == true) &&
             Platform.OS === 'ios' &&
             headerTransparent !== false)
         }
